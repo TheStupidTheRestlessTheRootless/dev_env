@@ -44,4 +44,16 @@ ENV PATH $JAVA_HOME/bin:$PATH
 # configure symbolic links for the java and javac executables
 RUN update-alternatives --install /usr/bin/java java $JAVA_HOME/bin/java 20000 && update-alternatives --install /usr/bin/javac javac $JAVA_HOME/bin/javac 20000
 
+EXPOSE 8080
+EXPOSE 8090
+EXPOSE 8091
+EXPOSE 8092
+EXPOSE 8093
+EXPOSE 8094
+EXPOSE 8095
+EXPOSE 8096
+EXPOSE 8097
+EXPOSE 8098
+EXPOSE 8099
+
 CMD ["/bin/bash"]

@@ -37,7 +37,7 @@ Plugin 'VundleVim/Vundle.vim'
 " All of your Plugins must be added before the following line
 " 自动补全神器
 Plugin 'Valloric/YouCompleteMe'
-let g:ycm_python_binary_path = '/root/.pyenv/versions/3.6.3/bin/python3'
+let g:ycm_python_binary_path = '/root/.pyenv/shims/python3'
 "let g:syntastic_python_checkers = ['flake8']
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
@@ -156,7 +156,7 @@ Plugin 'scrooloose/nerdcommenter'
 
 Plugin 'scrooloose/syntastic'
 
-let g:syntastic_python_python_exec = '/root/.pyenv/versions/3.6.3/bin/python3'
+let g:syntastic_python_python_exec = '/root/.pyenv/shims/python3'
 "let g:syntastic_python_python_exec = '/usr/bin/python'
 "set statusline+=%#warningmsg#
 "set statusline+=%{SyntasticStatuslineFlag()}
