@@ -47,6 +47,8 @@ let g:syntastic_check_on_wq = 0
 "let g:syntastic_javascript_standard_generic = 1
 " let g:syntastic_javascript_checkers = ['jshint']
 let g:syntastic_javascript_eslint_exec = ['eslint']
+" let g:ycm_gocode_binary_path = "$GOPATH/bin/gocode"
+" let g:ycm_godef_binary_path = "$GOPATH/bin/godef"
 
 
 "let g:ycm_python_binary_path = '/usr/bin/python'

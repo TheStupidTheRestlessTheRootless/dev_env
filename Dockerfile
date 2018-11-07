@@ -21,13 +21,6 @@ ADD ./install_py.sh /usr/local
 # install python 
 RUN chmod +x /usr/local/install_py.sh \
     &&/usr/local/install_py.sh
-# RUN git clone https://github.com/pyenv/pyenv.git $HOME/.pyenv \
-#     && echo 'export PYENV_ROOT="$HOME/.pyenv"' >> $HOME/.bashrc \
-#     && echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> $HOME/.bashrc \
-#     && echo 'export PYTHON_CONFIGURE_OPTS="--enable-shared"' >> $HOME/.bashrc \
-#     && echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' >> $HOME/.bashrc \
-#     && pyenv install $PY_VERSION \
-#     && pyenv global $PY_VERSION
 
 # install node
 RUN curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash 
@@ -59,7 +52,6 @@ RUN apt-get -q update && apt-get install --no-install-recommends -y -q curl git 
     && rm -rf /var/lib/apt/lists/* \
     && echo 'export DART_SDK="/usr/lib/dart"' >> $HOME/.bashrc \
     && echo 'export PATH="$DART_SDK/bin:$PATH"' >> $HOME/.bashrc
-    # curl https://storage.googleapis.com/download.dartlang.org/linux/debian/dart_unstable.list > /etc/apt/sources.list.d/dart_unstable.list && \
 
 # install go
 ENV GOLANG_VERSION 1.11.2
@@ -82,6 +74,7 @@ ADD ./.vimrc $HOME/.vimrc
 ADD ./.eslintrc.json $HOME/.eslintrc.json
 ADD ./.tmux.conf $HOME/.tmux.conf
 ADD ./.tmux.conf.local $HOME/.tmux.conf.local
+ADD ./.inputrc $HOME/.inputrc
 RUN chmod +x /usr/local/bin/tmux-session \
     && chmod +x /usr/local/install_vim.sh \
     && /usr/local/install_vim.sh
