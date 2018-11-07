@@ -13,7 +13,7 @@ RUN apt-get update \
     && apt-get clean
 
 ENV MVN_VERSION 3.3.9
-ENV JAVA_VERSION 1.8.0_101
+ENV JAVA_VERSION 1.8.0_191
 
 # get maven 3.3.9
 RUN wget --no-verbose -O /tmp/apache-maven-$MVN_VERSION.tar.gz http://archive.apache.org/dist/maven/maven-3/$MVN_VERSION/binaries/apache-maven-$MVN_VERSION-bin.tar.gz
@@ -31,7 +31,7 @@ ENV MAVEN_HOME /opt/maven
 
 # set shell variables for java installation
 ENV filename jdk-8u191-linux-x64.tar.gz
-ENV downloadlink http://download.oracle.com/otn-pub/java/jdk/8u191-b12/$filename
+ENV downloadlink http://download.oracle.com/otn-pub/java/jdk/8u191-b12/2787e4a523244c269598db4e85c51e0c/$filename
 
 # download java, accepting the license agreement
 RUN wget --no-cookies --header "Cookie: oraclelicense=accept-securebackup-cookie" -O /tmp/$filename $downloadlink 
