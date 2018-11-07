@@ -4,7 +4,7 @@ FROM docker.geekandchef.com/ubuntu:18.04
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh \
     && apt-get update \
     && apt-get install -y software-properties-common \ 
-    && apt-get install -y vim nano curl git libffi-dev make build-essential python-dev python-pip libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev gcc g++ cmake
+    && apt-get install -y vim nano curl git libffi-dev make build-essential python-dev python-pip libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev gcc g++ cmake ctags
 
 # java jkd
 RUN apt-get install -y openjdk-8-jdk 
@@ -82,7 +82,6 @@ ADD ./.vimrc $HOME/.vimrc
 ADD ./.eslintrc.json $HOME/.eslintrc.json
 ADD ./.tmux.conf $HOME/.tmux.conf
 ADD ./.tmux.conf.local $HOME/.tmux.conf.local
-RUN apt-get update && apt-get install -y ctags
 RUN chmod +x /usr/local/bin/tmux-session \
     && chmod +x /usr/local/install_vim.sh \
     && /usr/local/install_vim.sh

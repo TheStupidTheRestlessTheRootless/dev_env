@@ -35,7 +35,7 @@ Plugin 'VundleVim/Vundle.vim'
 " Plugin 'ascenator/L9', {'name': 'newL9'}
 "
 " All of your Plugins must be added before the following line
-自动补全神器
+" 自动补全神器
 Plugin 'Valloric/YouCompleteMe'
 let g:ycm_python_binary_path = '/root/.pyenv/versions/3.6.3/bin/python3'
 "let g:syntastic_python_checkers = ['flake8']
@@ -54,12 +54,12 @@ let g:syntastic_javascript_eslint_exec = ['eslint']
 "" g:syntastic_warning_symbol 和 g:syntastic_error_symbol 这两个为准
 let g:ycm_error_symbol='>>'
 let g:ycm_warning_symbol='>*'
-设置跳转的快捷键，可以跳转到definition和declaration
+" 设置跳转的快捷键，可以跳转到definition和declaration
 nnoremap <leader>gc :YcmCompleter GoToDeclaration<CR>
 nnoremap <leader>gf :YcmCompleter GoToDefinition<CR>
 nnoremap <leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR>
 "nmap <F4> :YcmDiags<CR>
-设置全局配置文件的路径
+" 设置全局配置文件的路径
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 "开启基于tag的补全，可以在这之后添加需要的标签路径
 let g:ycm_collect_identifiers_from_tags_files = 1
