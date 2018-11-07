@@ -16,7 +16,7 @@ npm install -g typescript
 # # 安装vim插件
 echo "-->install vim plugins..."
 vim -c PluginInstall -c q -c q
-# cd /root/.vim/bundle/YouCompleteMe/ && /root/.pyenv/shims/python install.py --clang-completer --java-completer --go-completer
+cd /root/.vim/bundle/YouCompleteMe/ && /root/.pyenv/shims/python install.py --clang-completer --java-completer --go-completer
 
 sed -i 's/"colorscheme solarized/colorscheme solarized/' ~/.vimrc
 git clone https://github.com/powerline/fonts.git ~/fonts
