@@ -1,25 +1,13 @@
 # dev_env_dockerfile
 
-based on ubuntu18.04
+basic develop environment based on ubuntu18.04
 
-# base
+## features
 
-[Dockerfile](./Dockerfile)
+1. run ssh server on startup
+2. create user with the same user id and group id as current local user
+3. run build image, start server and stop server with run_env.sh, use `run_env.sh -h`
+   for help
+4. install some default software: openjdk11, git, vim, emacs26
 
-# run
-
-> docker run -it -d -v localFolder:/data -p 8654:22 base:5.0
-
-- [x] ssh (apt)
-- [x] node: 8.11.2
-- [x] python: 3.7.0
-- [x] java: 8
-- [ ] go: 1.11.1
-- [ ] dart: 2.0.0
-- [ ] flutter: 0.10.1
-- [ ] nginx: 1.15.5
-- [x] git: 2.19.0
-- [x] vim + plugins
-- [x] tmux 2.5(cronb tmux-session)
-- [x] [nvm](https://github.com/creationix/nvm)
-- [x] [pyenv](https://github.com/pyenv/pyenv)
+create a fork or new branch if you want to add your own softwares.
