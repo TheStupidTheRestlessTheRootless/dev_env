@@ -16,6 +16,7 @@ RUN apt-get update -q && \
         apt-get install -y emacs26 openjdk-11-jdk
 
 RUN apt-get install -y htop
+RUN apt-get install -y global
 
 
 # sshd config
