@@ -1,6 +1,6 @@
 FROM alpine:3.11
 
-RUN apk add --no-cache --upgrade git curl logrotate nano openjdk8\
+RUN apk add --no-cache --upgrade git curl logrotate openjdk8 \
     openssh-server openssh-sftp-server sudo && \
     echo "**** setup openssh environment ****" && \
     sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/g' /etc/ssh/sshd_config && \
