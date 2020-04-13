@@ -1,0 +1,16 @@
+version: "3.0"
+services:
+  java-ssh:
+    image: triple-eggs/java:1.8
+    container_name: java-ssh-server
+    environment:
+      - USER_ID=1000
+      - USER_NAME=username
+      - GROUP_ID=1000
+      - GROUP_NAME=admin
+      - USER_PASSWORD=password #optional
+    volumes:
+      - /path/to/data:/data
+    ports:
+      - 22:2222
+    restart: always
