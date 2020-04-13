@@ -6,7 +6,7 @@ echo "GROUP_ID=$GROUP_ID GROUP_NAME=$GROUP_NAME" >> /tmp/x.log
 echo "USER_PASSWORD $USER_PWD" >> /tmp/x.log
 
 addgroup -g $GROUP_ID -S $GROUP_NAME 
-adduser -u $USER_ID -s /bin/ash -S $USER_NAME -G $GROUP_NAME
+adduser -u $USER_ID -s /bin/bash -S $USER_NAME -G $GROUP_NAME
 
 echo "$USER_NAME:$USER_PWD" | chpasswd
 
