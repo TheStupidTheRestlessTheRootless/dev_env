@@ -10,6 +10,8 @@ adduser -u $USER_ID -s /bin/bash -S $USER_NAME -G $GROUP_NAME
 
 echo "$USER_NAME:$USER_PWD" | chpasswd
 
+echo "[[ -s /etc/bash.bashrc ]] && source /etc/bash.bashrc" > /home/$USER_NAME/.bash_profile
+
 # run ssh
 ssh-keygen -t rsa -P "" -f /etc/ssh/ssh_host_rsa_key
 ssh-keygen -t ecdsa -P "" -f /etc/ssh/ssh_host_ecdsa_key
