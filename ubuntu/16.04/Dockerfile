@@ -1,11 +1,9 @@
-FROM ubuntu:18.04
-
-ENV DEBIAN_FRONTEND=noninteractive
+FROM ubuntu:16.04
 
 RUN apt update && apt -y upgrade
 RUN apt install -y apt-utils software-properties-common build-essential apt-transport-https ca-certificates
-RUN apt install -y openssh-server sudo vim wget curl
-RUN apt install -y zip git zlib1g-dev libssl-dev scons
+RUN add-apt-repository ppa:deadsnakes/ppa
+RUN apt update && apt install -y openssh-server sudo vim wget curl zip git zlib1g-dev libssl-dev scons python2.7 python3.6
 
 RUN mkdir /var/run/sshd
 RUN sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
